@@ -10,6 +10,8 @@ import { useState } from "react";
 import UnmountExample from "./components/ExampleComponents/UnmountExample";
 import Intercambiabilidad from "./components/ExampleComponents/Intercambiabilidad";
 import CartProvider from "./components/contexts/CartContext";
+import Test from "./components/Test";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
   const [amountItems, setAmountItems] = useState(0);
   return (
    <>
+   <Test theme={"light"}/>
    <CartProvider>
    <BrowserRouter>
    <NavBar name={"menu"} />

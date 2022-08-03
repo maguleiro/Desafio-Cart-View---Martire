@@ -17,6 +17,8 @@ const ButtonCount = ({onAdd, stock}) => (
 const Intercambiabilidad = ({countType}) => {
 	const onAdd = () => console.log("This is triggered onAdd");
 	const Count = countType == "button" ? ButtonCount  : InputCount;
+
+	
 	return( <Count onAdd={onAdd} stock={4} />);
 }
 export default Intercambiabilidad;

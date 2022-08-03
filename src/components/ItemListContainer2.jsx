@@ -2,39 +2,38 @@ import React, { useState, useEffect, useParams } from "react";
 import ItemsData from "./ItemsData";
 import ItemList from "./ItemList";
 import data from "./utils/data.json";
-
+import Spinner from "./Spinner";
 
 function ItemListContainer2(props){
 
 const {name} = useParams ();
-const [item, setItem] = useState([]);
+const [items, setItems] = useState([]);
+const [loading, setLoading] = useState(false);
 const promise = new Promise((resolve) => {
 	setTimeout(() => resolve(data),2000);
 });
-console.log("% Render ItemListContainer2","color:green");
-console.log(item);
-
-
-const getItem = () =>{
-	promise.then((res) => {
-		const products = res;
-		if (name) {
-			setItem(products.filter((product) => product.category == name));
-		} else {
-			setItem(products);
-		}
-	});
-};
 
 useEffect(() => {
-	getItem();
+	setLoading(true);
+	promise.then((res) =>{
+		const products = res;
+		if (name) {
+			setItems(products.filter((product) => product.category ==name ))
+		} else {
+			setItems(products);
+		}
+		setLoading(false);
+	});
+	
 }, [name]);
 
-
+if(loading){
+	return <Spinner />
+}
 
 return (
 	<div>
-	<ItemList items={item}/>
+	<ItemList items={items}/>
 	</div>
 );
 }
