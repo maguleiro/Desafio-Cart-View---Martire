@@ -1,0 +1,47 @@
+[
+	{
+
+		"id": 1,
+		"name": "Fernet",
+		"precio": 500,
+		"img":"/img/fernet.jpg",
+		"category": "bebidas"
+	},
+	{
+		"id":2,
+		"name":"Gin",
+		"precio": 450,
+		"img":"/img/gin.jpg",
+		"category": "bebidas"
+	},
+	{
+		"id":3,
+		"name":"Jaggermeister",
+		"precio":800,
+		"img":"/img/jaggermeister.jpg",
+		"category": "bebidas"
+	},
+	{
+		"id":4,
+		"name":"Vodka",
+		"precio":650,
+		"img":"/img/vodka.jpg",
+		"category": "bebidas"
+	},
+	{
+		"id":5,
+		"name":"Sex on the beach",
+		"precio":600,
+		"img":"/img/sotb.jpg",
+		"category": "bebidas"
+	},
+	{
+		"id":6,
+		"name":"Cerveza",
+		"precio":250,
+		"img":"/img/cerveza.jpg",
+		"category": "bebidas"
+	}
+
+	]
+
